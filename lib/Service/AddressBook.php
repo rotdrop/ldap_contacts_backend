@@ -104,7 +104,7 @@ class AddressBook extends ExternalAddressBook {
 	 */
 	function getProperties($properties) {
 		return [
-			'principaluri' => $this->principalUri,
+			'{' . Plugin::NS_OWNCLOUD . '}principaluri' => $this->principalUri,
 			'{DAV:}displayname' => $this->cardBackend->getDisplayName(),
 			'{' . Plugin::NS_OWNCLOUD . '}read-only' => true,
 		];
